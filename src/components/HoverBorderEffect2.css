@@ -1,0 +1,25 @@
+.border-effect {
+    width: 140px;
+    height: 60px;
+    position: relative;
+    border: none;
+    border-radius: 12px; /* Adding border-radius to the main border */
+}
+
+.border-effect::before {
+    content: '';
+    position: absolute;
+    top: -10px; 
+    left: -10px; 
+    right: -10px; 
+    bottom: -10px; 
+    border: 5px solid #A1C5EC; /* Thicker new border */
+    border-radius: 20px; /* Adding border-radius to the new border */
+    opacity: 0;
+    transition: opacity 0.9s ease-in-out;
+    z-index: -1; /* Ensure it stays behind the main border */
+}
+
+.border-effect:hover::before {
+    opacity: 1;
+}

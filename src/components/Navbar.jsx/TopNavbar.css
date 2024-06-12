@@ -1,0 +1,23 @@
+#firstpanel{
+    color: red;
+}
+#TopNavbar{
+    padding: 6px;
+}
+a{
+    text-decoration: underline;
+    font-size: smaller;
+}
+@media screen and (max-width:480px){
+    #thirdpara{
+        display: none;
+    }
+    #secondpara{
+        display: none;
+    }
+}
+@media screen and (max-width:992px) and (min-width:481px){
+    #thirdpara{
+        display: none;
+    }
+}
