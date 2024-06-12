@@ -55,58 +55,40 @@ This project is a clone of Kohl's website, built using modern web technologies. 
 ![Homepage](src/ssOfProject/ss1.png)
 
 ### Product Detail Page
-![Product Detail](src/ssOfProject/ss2.png)
+![Dropdown](src/ssOfProject/ss2.png)
 
 ### Cart - Empty State
-![Empty Cart](src/ssOfProject/ss3.png)
+![Womenpage](src/ssOfProject/ss3.png)
 
 ### Cart - With Items
-![Cart with Items](src/ssOfProject/ss4.png)
+![footer](src/ssOfProject/ss4.png)
 
 ### Men Page
-![Men Page](src/ssOfProject/ss5.png)
+![Home Shopping page](src/ssOfProject/ss5.png)
 
 ### Women Page
-![Women Page](src/ssOfProject/ss6.png)
+![Womenpage Cards](src/ssOfProject/ss6.png)
 
 ### Shoes Page
-![Shoes Page](src/ssOfProject/ss7.png)
+![Product detail](src/ssOfProject/ss7.png)
 
-### Kids Page
-![Kids Page](src/ssOfProject/ss8.png)
-
-### Home Shopping Page
-![Home Shopping Page](src/ssOfProject/ss9.png)
 
 ### Sign-in Page
-![Sign-in Page](src/ssOfProject/ss10.png)
+![SignUp page](src/ssOfProject/ss8.png)
 
-### Real-time Password Feedback
-![Real-time Password Feedback](src/ssOfProject/ss11.png)
+### Home Shopping Page
+![Deleting product from card](src/ssOfProject/ss9.png)
 
-### Loading Indicator
-![Loading Indicator](src/ssOfProject/ss12.png)
 
-### Error Alert
-![Error Alert](src/ssOfProject/ss13.png)
+### Cart - Empty State
+![empty card ui](src/ssOfProject/ss10.png)
 
-### Navigation
-![Navigation](src/ssOfProject/ss14.png)
 
-### Product Listing
-![Product Listing](src/ssOfProject/ss15.png)
+![slider](src/ssOfProject/ss14.png)
 
-### Add to Cart
-![Add to Cart](src/ssOfProject/ss16.png)
 
-### Cart Summary
-![Cart Summary](src/ssOfProject/ss17.png)
+![slider](src/ssOfProject/ss14.png)
 
-### Delete from Cart
-![Delete from Cart](src/ssOfProject/ss18.png)
-
-### Navigation Back to Home
-![Navigation Back to Home](src/ssOfProject/ss19.png)
 
 ## Pages
 
