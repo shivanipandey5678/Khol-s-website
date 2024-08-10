@@ -23,9 +23,7 @@ export default function Home() {
          Shivani,here are more great finds you'll love.
       </Heading>
       <HoverBordergrid2/>
-      <Image src={Img2}></Image>
-      <Image src={Img3}></Image>
-      <Image src={Img4}></Image>
+     
       
       </Container>
       <Footer/>

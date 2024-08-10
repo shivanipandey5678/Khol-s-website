@@ -65,7 +65,8 @@ import {useEffect,useState} from 'react';
 import axios from 'axios';
 
 import star from '../assets/star-solid.svg';
-import { Breadcrumb, BreadcrumbItem, Heading, Image, Flex, Container, Text, Box, Badge, Button} from '@chakra-ui/react';
+import {  Heading, Image, Flex, Container, Text, Box, Badge, Button} from '@chakra-ui/react';
+import { Breadcrumb, BreadcrumbItem, Link as ChakraLink } from '@chakra-ui/react';
 
 export default function SingleProductCard({ smalldescription, header, sellnumber, img, id,price, previousPrice, tags }) {
     let navigate=useNavigate();
@@ -108,26 +109,30 @@ export default function SingleProductCard({ smalldescription, header, sellnumber
         <>
             <Navbar />
             <Container maxW='80vw' p={4}>
-                <Breadcrumb spacing='8px' separator=">">
-                    <BreadcrumbItem>
-                        <Link to="/">Home</Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem>
-                        <Link to="/women">Women</Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem>
-                        <Link to="/men">Men</Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem>
-                        <Link to="/kids">Kids</Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem>
-                        <Link  to="/under10">Under $10</Link>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem isCurrentPage>
-                        <Link to="/under20">Under $20</Link>
-                    </BreadcrumbItem>
-                </Breadcrumb>
+            <Breadcrumb 
+            spacing={{ base: '4px', md: '8px' }} 
+            separator=">" 
+            fontSize={{ base: 'sm', md: 'md' }}
+        >
+            <BreadcrumbItem>
+                <ChakraLink as={Link} to="/">Home</ChakraLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem>
+                <ChakraLink as={Link} to="/women">Women</ChakraLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem>
+                <ChakraLink as={Link} to="/men">Men</ChakraLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem>
+                <ChakraLink as={Link} to="/kids">Kids</ChakraLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem>
+                <ChakraLink as={Link} to="/under10">Under $10</ChakraLink>
+            </BreadcrumbItem>
+            <BreadcrumbItem isCurrentPage>
+                <ChakraLink as={Link} to="/under20">Under $20</ChakraLink>
+            </BreadcrumbItem>
+        </Breadcrumb>
 
                 <Box mt={6} mb={6}>
                     <Heading as='h2' size='xl'>{smalldescription}</Heading>

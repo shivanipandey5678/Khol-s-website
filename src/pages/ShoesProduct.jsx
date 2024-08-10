@@ -316,30 +316,31 @@ export default function Under20Product() {
              
              
                
-              <Heading as='h2' size='xl' mb={3} textAlign={'center'}>Shop Kids' + Baby</Heading>
-              <Flex gap={4} mb={12}mt={8} justify={'space-around'} >
+              <Heading as='h2' size='xl' mb={3} textAlign={'center'}>Shoes</Heading>
+              <Heading as='h2' size='md' mb={3}>Shop all shoes</Heading>
+              <Flex gap={4} mb={6} justify={'space-around'} wrap={{ base: 'wrap', md: 'nowrap' }}  direction={{ base: 'column', md: 'row' }}>
 
                 <Box>
-                 <Image src={baby} h={'130px'}  ></Image>
-                 <Text _hover={{textDecoration:'underline'}} textAlign={'center'}><b>Baby 0M-24M</b></Text>
+                 <Image src='https://media.kohlsimg.com/is/image/kohls/2024-129292-1' h={'130px'}></Image>
+                 <Text _hover={{textDecoration:'underline'}} textAlign={'center'}><b>Atheletic Shoes</b></Text>
                 </Box>
                 <Box>
-                 <Image src={littlekids}  h={'130px'} ></Image>
-                 <Text   _hover={{ textDecoration: 'underline' }}  textAlign={'center'}><b>Kids' 4-7</b></Text>
+                 <Image src='https://media.kohlsimg.com/is/image/kohls/2024-129292-2'  h={'130px'}></Image>
+                 <Text   _hover={{ textDecoration: 'underline' }}  textAlign={'center'}><b>Polished Casual</b></Text>
                 </Box>
                 <Box>
-                 <Image src={bigKidsImage}  h={'130px'}  ></Image>
-                 <Text _hover={{textDecoration:'underline'}} textAlign={'center'}><b>Kids' 7-20
+                 <Image src='https://media.kohlsimg.com/is/image/kohls/2024-129292-3'  h={'130px'}></Image>
+                 <Text _hover={{textDecoration:'underline'}} textAlign={'center'}><b>Dress Shoes
                  </b></Text>
                 </Box>
                 <Box>
-                 <Image src={toddlers}  h={'130px'}  ></Image>
-                 <Text _hover={{textDecoration:'underline'}} textAlign={'center'}><b>Kids' 12M-5T
+                 <Image src='https://media.kohlsimg.com/is/image/kohls/2024-129292-4'  h={'130px'}></Image>
+                 <Text _hover={{textDecoration:'underline'}} textAlign={'center'}><b>Adaptive
                  </b></Text>
                 </Box>
                 
               </Flex>
-            <Flex justify={'space-between'} mr={7}>
+            <Flex justify={'space-between'} mr={7} flexDirection={{base:"column",md:"row"}}>
               <HStack spacing={4}>
       {/* Transparent background tag */}
       <Tag
@@ -381,7 +382,7 @@ export default function Under20Product() {
       </Select>
       </Flex>
              
-            <SimpleGrid columns={{ base: 2, md: 3, lg: 4 }} spacing={7} mt={10}>
+            <SimpleGrid columns={{ base: 1, md: 2, lg: 3,xl:4 }} spacing={7} mt={10}>
               {kidsproduct.map((each) => {
                 return (
                   <CardBox {...each} key={each.id} />
@@ -397,28 +398,24 @@ export default function Under20Product() {
       </Flex>
       <Container maxW={'80%'} mt={35}>
         <Heading textAlign={'center'} as='h2' size="xl" mb={6}>Best Sellers</Heading>
-      <Slider {...settings} width={'80%'} bg={'green'}>
-       {menSlider.map((eachProductCard)=>{
-        return (
-            <>
 
-        <Box w={'250px'} key={eachProductCard.id}>
-                    <Image src={eachProductCard.photo}></Image>
-                    <Flex color={"#C13CE6"} >
-                            <h3 style={{marginRight:"5px",fontWeight:900}} >{eachProductCard.price}</h3 >
-                            <span>with code SAVINGS15</span>
-                    </Flex>
-                    
-            <p style={{textDecoration:"line-through",fontSize:10}}>{eachProductCard.PrevPrice}</p>
-            <p>{eachProductCard.description}</p>
-           
+        {/* Box to handle responsive display */}
+        <Box display={{ base: 'none', md: 'block' }}> {/* Hide on small screens */}
+          <Slider {...settings} width={'80%'} bg={'green'}>
+            {menSlider.map((eachProductCard) => (
+              <Box w={'250px'} key={eachProductCard.id}>
+                <Image src={eachProductCard.photo} alt={eachProductCard.description} />
+                <Flex color={"#C13CE6"}>
+                  <h3 style={{ marginRight: "5px", fontWeight: 900 }}>{eachProductCard.price}</h3>
+                  <span>with code SAVINGS15</span>
+                </Flex>
+                <p style={{ textDecoration: "line-through", fontSize: 10 }}>{eachProductCard.PrevPrice}</p>
+                <p>{eachProductCard.description}</p>
+              </Box>
+            ))}
+          </Slider>
         </Box>
-            
-            </>
-        )
-       })}
-        </Slider>
-        </Container>
+      </Container>
       <Footer/>
       </>
     

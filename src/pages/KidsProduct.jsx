@@ -317,7 +317,7 @@ export default function MenProduct() {
              
                
               <Heading as='h2' size='xl' mb={3} textAlign={'center'}>Shop Kids' + Baby</Heading>
-              <Flex gap={4} mb={12}mt={8} justify={'space-around'} >
+              <Flex gap={4} mb={12}mt={8} justify={'space-around'} display={{base:"none"}}>
 
                 <Box>
                  <Image src={baby} h={'130px'}  ></Image>
@@ -339,7 +339,7 @@ export default function MenProduct() {
                 </Box>
                 
               </Flex>
-            <Flex justify={'space-between'} mr={7}>
+            <Flex justify={'space-between'} mr={7}  direction={{ base: 'column', md: 'row' }}>
               <HStack spacing={4}>
       {/* Transparent background tag */}
       <Tag
@@ -381,7 +381,7 @@ export default function MenProduct() {
       </Select>
       </Flex>
              
-            <SimpleGrid columns={{ base: 2, md: 3, lg: 4 }} spacing={7} mt={10}>
+            <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={7} mt={10} ml={'auto'} mr={'auto'}>
               {kidsproduct.map((each) => {
                 return (
                   <CardBox {...each} key={each.id} />
@@ -396,29 +396,25 @@ export default function MenProduct() {
         
       </Flex>
       <Container maxW={'80%'} mt={35}>
-        <Heading textAlign={'center'} as='h2' size="xl" mb={6}>Best Sellers</Heading>
-      <Slider {...settings} width={'80%'} bg={'green'}>
-       {menSlider.map((eachProductCard)=>{
-        return (
-            <>
+        <Heading textAlign={'center'} as='h2' size="xl" mb={6} display={{base:"none",md:'flex'}} justifyContent={'center'}>Best Sellers</Heading>
 
-        <Box w={'250px'} key={eachProductCard.id}>
-                    <Image src={eachProductCard.photo}></Image>
-                    <Flex color={"#C13CE6"} >
-                            <h3 style={{marginRight:"5px",fontWeight:900}} >{eachProductCard.price}</h3 >
-                            <span>with code SAVINGS15</span>
-                    </Flex>
-                    
-            <p style={{textDecoration:"line-through",fontSize:10}}>{eachProductCard.PrevPrice}</p>
-            <p>{eachProductCard.description}</p>
-           
+        {/* Box to handle responsive display */}
+        <Box display={{ base: 'none', md: 'block' }}> {/* Hide on small screens */}
+          <Slider {...settings} width={'80%'} bg={'green'}>
+            {menSlider.map((eachProductCard) => (
+              <Box w={'250px'} key={eachProductCard.id}>
+                <Image src={eachProductCard.photo} alt={eachProductCard.description} />
+                <Flex color={"#C13CE6"}>
+                  <h3 style={{ marginRight: "5px", fontWeight: 900 }}>{eachProductCard.price}</h3>
+                  <span>with code SAVINGS15</span>
+                </Flex>
+                <p style={{ textDecoration: "line-through", fontSize: 10 }}>{eachProductCard.PrevPrice}</p>
+                <p>{eachProductCard.description}</p>
+              </Box>
+            ))}
+          </Slider>
         </Box>
-            
-            </>
-        )
-       })}
-        </Slider>
-        </Container>
+      </Container>
       <Footer/>
       </>
     
