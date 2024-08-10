@@ -9,10 +9,7 @@
 // }
 
 import CardBox from '../components/Card';
-import baby from '../assets/baby.png'
-import bigKidsImage from '../assets/big-kids.png';
-import littlekids from '../assets/little-kids.png';
-import toddlers from '../assets/toddlers.png';
+
 import Navbar from '../components/Navbar.jsx/Navbar'
 import Footer from '../components/Footer';
 import axios from 'axios';
